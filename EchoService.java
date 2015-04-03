@@ -1,6 +1,7 @@
 package day22;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /*
  * client -server architecture
@@ -20,6 +21,6 @@ public interface EchoService extends Remote{
 	 * @return returns the same string that was passed as an argument
 	 */
 
-	public String echo (String s);
+	public String echo (String s) throws RemoteException;
 	
 }
