@@ -6,13 +6,12 @@ import java.rmi.server.UnicastRemoteObject;
 public class Server extends UnicastRemoteObject implements EchoService{
 
 
-	protected Server() throws RemoteException {
-		super();
+	public Server() throws RemoteException {
 	}
 
 	public String echo(String s) throws RemoteException {
 
-		
+		System.out.println("Replying to client "+s);
 		return s;
 	}
 
