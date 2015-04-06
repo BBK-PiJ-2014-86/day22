@@ -1,7 +1,12 @@
 package day22;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
+
 
 public class Server extends UnicastRemoteObject implements EchoService{
 
@@ -14,6 +19,8 @@ public class Server extends UnicastRemoteObject implements EchoService{
 		System.out.println("Replying to client "+s);
 		return s;
 	}
+
+
 
 	
 	
